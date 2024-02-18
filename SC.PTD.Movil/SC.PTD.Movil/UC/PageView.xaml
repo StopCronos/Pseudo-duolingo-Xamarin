@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ViewModel="clr-namespace:SC.PTD.Movil.ViewModel"
+             x:Class="SC.PTD.Movil.UC.PageView"
+             >
+    <ContentView.BindingContext>
+        <ViewModel:AbecedarioViewModel/>
+    </ContentView.BindingContext>
+    
+    <ContentView.Content>
+        <Grid RowDefinitions="auto,50,auto,1*,auto">
+            <StackLayout Orientation="Horizontal" BackgroundColor="#2185D0" Margin="0" Padding="0">
+                <Frame x:Name="frameAbecedario" IsVisible="true" Padding="5,5,5,5" BackgroundColor="#80ffffff">
+                    <Image Source="abecedario64.png" Margin="0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped0"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+                <Frame x:Name="frameTraducr" Padding="5,5,5,5" Margin="0" BackgroundColor="Transparent">
+                    <Image Source="traducir64.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+                <Frame x:Name="frameRepetir" Padding="5,5,5,5" Margin="0" BackgroundColor="Transparent">
+                    <Image Source="repetir64.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+                <Frame x:Name="frameCompletar" Padding="5,5,5,5" Margin="0" BackgroundColor="Transparent">
+                    <Image Source="otroCompletar64.png" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped2"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+                <Frame x:Name="frameDeletrear" Padding="5,5,5,5" Margin="0" BackgroundColor="Transparent">
+                    <Image Source="deletrear64.png" >
+                        <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped3"/>
+                    </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+
+            </StackLayout>
+            <Label x:Name="TituloLabel" Text="" Grid.Row="1" FontSize="30" FontFamily="Arial" CharacterSpacing=".5" FontAttributes="Bold" Margin="20,5" TextColor="#2185D0"/>
+
+            <ContentView x:Name="ContenidoFrame" Grid.Row="2"  VerticalOptions="FillAndExpand" Margin="20,0"/>
+
+            <ContentView x:Name="ContenidoPieFrame" Grid.Row="3" Margin="0,50,0,0"  VerticalOptions="FillAndExpand"/>
+
+            <ContentView x:Name="ContenidoPieHN" Grid.Row="4" BackgroundColor="Transparent" VerticalOptions="FillAndExpand">
+                <Grid>
+                    <Label Text="HN" Grid.Column="2" Margin="0,0,20,0" HorizontalTextAlignment="End" TextColor="#FF4040" VerticalTextAlignment="Start" FontSize="20" FontAttributes="Bold" FontFamily="Arial"/>
+                </Grid>
+            </ContentView>
+
+        </Grid>
+            
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SC.PTD.Movil.View.AbecedarioPage"
+             xmlns:ViewModel="clr-namespace:SC.PTD.Movil.ViewModel"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:UC="clr-namespace:SC.PTD.Movil.UC">
+
+    <ContentPage.BindingContext>
+        <ViewModel:AbecedarioViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <UC:PageView Titulo="Aprende el abecedario">
+                <UC:PageView.Contenido>
+                    <ListView ItemsSource="{Binding AbecedarioList}" HasUnevenRows="True" VerticalOptions="FillAndExpand" HeightRequest="630"
+                    BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                
+                                <ViewCell IsEnabled="False">
+                                    <Grid ColumnDefinitions="*,*" Padding="20,0,20,20">
+                                    <Frame BorderColor="#707070" Grid.ColumnSpan="2" BackgroundColor="Transparent"/>
+                                    <Label Text="{Binding Letra}" FontFamily="Spongeboy Me Bob" TextColor="#FF4040" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="47"/>
+                                    <Label Text="{Binding TojolabalLetra}" FontFamily="Spongeboy Me Bob" TextColor="#FF4040" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="47" Padding="0,10,0,5"/>
+
+                                </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                
+                </UC:PageView.Contenido>
+            </UC:PageView>
+    </ContentPage.Content>
+</ContentPage>

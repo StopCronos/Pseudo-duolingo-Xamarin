@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BaWalaWaa.aac" />
+    <None Remove="BaWalaWaaa.aac" />
+    <None Remove="beep.wav" />
+    <None Remove="JaJbiIlJaKen.aac" />
+    <None Remove="JastalAya.aac" />
+    <None Remove="JayeXaWaJabili.aac" />
+    <None Remove="JnaBajtik.aac" />
+    <None Remove="OjKankon.aac" />
+    <None Remove="OjmaBobOchkon.aac" />
+    <None Remove="OjmaWaAnik.aac" />
+    <None Remove="SaNApetsanilex.mp3" />
+    <None Remove="SaNApetsanilexJmojJumasa.aac" />
+    <None Remove="WajbaYatelJaTati.aac" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />
+    <PackageReference Include="Plugin.MediaManager.Forms" Version="1.1.1" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.6.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="BaWalaWaa.aac" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="BaWalaWaaa.aac" />
+    <EmbeddedResource Include="beep.wav" />
+    <EmbeddedResource Include="JaJbiIlJaKen.aac" />
+    <EmbeddedResource Include="JastalAya.aac" />
+    <EmbeddedResource Include="JayeXaWaJabili.aac" />
+    <EmbeddedResource Include="JnaBajtik.aac" />
+    <EmbeddedResource Include="OjKankon.aac" />
+    <EmbeddedResource Include="OjmaBobOchkon.aac" />
+    <EmbeddedResource Include="OjmaWaAnik.aac" />
+    <EmbeddedResource Include="SaNApetsanilex.mp3" />
+    <EmbeddedResource Include="SaNApetsanilexJmojJumasa.aac" />
+    <EmbeddedResource Include="WajbaYatelJaTati.aac" />
+  </ItemGroup>
+</Project>

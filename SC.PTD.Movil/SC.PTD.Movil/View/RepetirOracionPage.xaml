@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:UC="clr-namespace:SC.PTD.Movil.UC" xmlns:ViewModel="clr-namespace:SC.PTD.Movil.ViewModel"
+             x:Class="SC.PTD.Movil.View.RepetirOracionPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <ViewModel:RepetirOracionViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        
+        <UC:PageView Titulo="Repite esta oración">
+
+            <UC:PageView.Contenido>
+                <Grid RowDefinitions="auto,auto,auto">
+                    <Label x:Name="labeltojolabal" FontSize="30" TextColor="#000" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,50,0,0" Grid.Row="0"/>
+                    <Label x:Name="labelEspañol" FontSize="Large" TextColor="#000" HorizontalTextAlignment="Center" Margin="0,50,0,100" Grid.Row="1"/>
+
+                    <Frame x:Name="btnGris"  BackgroundColor="#ACCEDE" HorizontalOptions="Center" MinimumWidthRequest="80" WidthRequest="90" MinimumHeightRequest="70" HeightRequest="80"   Grid.Row="2" CornerRadius="15" />
+                    <Image x:Name="imgSC" Grid.Row="2" Source="soundSC64.png" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Frame x:Name="btnAzul" IsVisible="false" BackgroundColor="#2185D0" HorizontalOptions="Center" MinimumWidthRequest="80" WidthRequest="90" MinimumHeightRequest="70" HeightRequest="80"   Grid.Row="2" CornerRadius="15" />
+                    <Image x:Name="imgCC" IsVisible="false" Grid.Row="2" Source="soundCC64.png" >
+                        <!--<Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Image.GestureRecognizers>-->
+                    </Image>
+                </Grid>
+            </UC:PageView.Contenido>
+        </UC:PageView>
+    </ContentPage.Content>
+</ContentPage>

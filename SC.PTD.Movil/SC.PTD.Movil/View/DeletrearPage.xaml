@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:UC="clr-namespace:SC.PTD.Movil.UC" xmlns:ViewModel="clr-namespace:SC.PTD.Movil.ViewModel"
+             x:Class="SC.PTD.Movil.View.DeletrearPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <ViewModel:DeletrearViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <UC:PageView Titulo="Completa la palabra">
+
+            <UC:PageView.Contenido>
+                <Grid RowDefinitions="auto,auto">
+                    <Label x:Name="lblPalabra" Text="hola" Grid.Row="0" HorizontalOptions="Center" FontSize="90" FontAttributes="Bold"/>
+                    <StackLayout x:Name="slEntries" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center" Margin="0,50,0,0">
+                        <!--<Frame BackgroundColor="Transparent" BorderColor="#707070" Padding="5,0">
+                            <Entry x:Name="entryUno" FontSize="30" FontAttributes="Bold"  MaxLength="1" Keyboard="Plain"/>
+                        </Frame>
+                        <Frame BackgroundColor="Transparent" BorderColor="#707070" Padding="5,0">
+                            <Entry x:Name="entryDos" FontSize="30" FontAttributes="Bold" MaxLength="1" Keyboard="Plain"/>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent" BorderColor="#707070" Padding="5,0">
+                            <Entry x:Name="entryTres" FontSize="30" FontAttributes="Bold" MaxLength="1" Keyboard="Plain"/>
+                        </Frame>
+                        <Frame BackgroundColor="Transparent" BorderColor="#707070" Padding="5,0">
+                            <Entry x:Name="entryCuatro" FontSize="30" FontAttributes="Bold" MaxLength="1" Keyboard="Plain"/>
+                        </Frame>
+                        <Frame BackgroundColor="Transparent" BorderColor="#707070" Padding="5,0">
+                            <Entry x:Name="entryCinco" FontSize="30" FontAttributes="Bold" MaxLength="1" Keyboard="Plain"/>
+                        </Frame>
+                        <Frame BackgroundColor="Transparent" BorderColor="#707070" Padding="5,0">
+                            <Entry x:Name="entryCinco" FontSize="30" FontAttributes="Bold" MaxLength="1" Keyboard="Plain"/>
+                        </Frame>
+                        <Frame BackgroundColor="Transparent" BorderColor="#707070" Padding="5,0">
+                            <Entry x:Name="entryCinco" FontSize="30" FontAttributes="Bold" MaxLength="1" Keyboard="Plain"/>
+                        </Frame>-->
+                    </StackLayout>
+                </Grid>
+            </UC:PageView.Contenido>
+
+            <UC:PageView.ContenidoPie>
+                <Grid RowDefinitions="*,*" Margin="0,174,0,0">
+                    <Frame x:Name="frameMensaje" BackgroundColor="#2185D0" Grid.Row="0" Margin="0,5,0,0" IsVisible="false" Grid.RowSpan="2">
+                        <Grid ColumnDefinitions="2*,1*" >
+                            <Label x:Name="textFelicitacion" Text="¡Muy bien!" TextColor="#000000" FontSize="20" Margin="20,0"/>
+
+                            <Image x:Name="imgCheck" Source="checkCC64.png" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" Grid.Row="0"/>
+
+                            <Image x:Name="imgTache" Source="tacheCC64.png" IsVisible="false" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1" Grid.Row="0"/>
+                        </Grid>
+                    </Frame>
+                    <Button x:Name="btnGris" IsVisible="true" BackgroundColor="#909090" Grid.Row="1"  CornerRadius="15" BorderColor="#707070" Text="CONTINUAR" TextTransform="Uppercase" TextColor="#B4B4B4" FontAttributes="Bold" FontSize="25" Margin="20,0,20,0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" MinimumHeightRequest="50" HeightRequest="55"/>
+
+                    <Button x:Name="btnAmarillo" IsVisible="false" Clicked="btnAmarillo_Clicked" BackgroundColor="#FCE903" Grid.Row="1" CornerRadius="15" BorderColor="#707070" Text="CONTINUAR" TextTransform="Uppercase" TextColor="#FF4040" FontAttributes="Bold" FontSize="25" Margin="20,0,20,0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" MinimumHeightRequest="50" HeightRequest="55"/>
+
+                    <Button x:Name="btnAmarilloDos" IsVisible="false" Clicked="btnAmarilloDos_Clicked" BackgroundColor="#FCE903" Grid.Row="1" CornerRadius="15" BorderColor="#707070" Text="CONTINUAR" TextTransform="Uppercase" TextColor="#FF4040" FontAttributes="Bold" FontSize="25" Margin="20,0,20,0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" MinimumHeightRequest="50" HeightRequest="55"/>
+                </Grid>
+            </UC:PageView.ContenidoPie>
+        </UC:PageView>
+    </ContentPage.Content>
+</ContentPage>

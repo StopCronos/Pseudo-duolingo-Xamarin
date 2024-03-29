@@ -91,9 +91,9 @@ namespace SC.PTD.Movil.ViewModel
                 OracionesList.Add(new RepetirOracionModel
                 {
                     Id = 3,
-                    OracionTojolabal = "Sa'n apetsanilex",
+                    OracionTojolabal = "Sa'n apetsanilex jmoj jumasa",
                     OracionEspañol = "(Buenos días a todos y a todas)",
-                    Url = "SaNApetsanilex.mp3"
+                    Url = "SaNApetsanilex.aac"
                 });
                 OracionesList.Add(new RepetirOracionModel
                 {

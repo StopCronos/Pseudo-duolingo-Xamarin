@@ -22,8 +22,7 @@
     <None Remove="OjKankon.aac" />
     <None Remove="OjmaBobOchkon.aac" />
     <None Remove="OjmaWaAnik.aac" />
-    <None Remove="SaNApetsanilex.mp3" />
-    <None Remove="SaNApetsanilexJmojJumasa.aac" />
+    <None Remove="SaNApetsanilex.aac" />
     <None Remove="WajbaYatelJaTati.aac" />
   </ItemGroup>
 
@@ -49,8 +48,7 @@
     <EmbeddedResource Include="OjKankon.aac" />
     <EmbeddedResource Include="OjmaBobOchkon.aac" />
     <EmbeddedResource Include="OjmaWaAnik.aac" />
-    <EmbeddedResource Include="SaNApetsanilex.mp3" />
-    <EmbeddedResource Include="SaNApetsanilexJmojJumasa.aac" />
+    <EmbeddedResource Include="SaNApetsanilex.aac" />
     <EmbeddedResource Include="WajbaYatelJaTati.aac" />
   </ItemGroup>
 </Project>

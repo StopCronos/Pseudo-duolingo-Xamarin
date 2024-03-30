@@ -16,12 +16,14 @@ namespace SC.PTD.Movil.ViewModel
         public RepetirOracionViewModel()
         {
             LlenarListasCommand.Execute(null);
+
+            n = OracionesList.Count() == n ? 0 : n + 1;
         }
 
         #endregion
 
         #region Propiedades
-
+        private static int n = 0;//randomN.Next(1, 11);
 
         private ObservableCollection<RepetirOracionModel> oracionesList;
         public ObservableCollection<RepetirOracionModel> OracionesList { get => oracionesList; set => Set(ref oracionesList, value); }
@@ -112,7 +114,7 @@ namespace SC.PTD.Movil.ViewModel
                 OracionesList.Add(new RepetirOracionModel
                 {
                     Id = 6,
-                    OracionTojolabal = "B'a wajuma'a?",
+                    OracionTojolabal = "B'a wa juma'a'?",
                     OracionEspañol = "(¿A dónde vas?)",
                     Url = "BaWalaWaaa.aac"
                 });
@@ -133,24 +135,29 @@ namespace SC.PTD.Movil.ViewModel
                 OracionesList.Add(new RepetirOracionModel
                 {
                     Id = 9,
-                    OracionTojolabal = "Ojkankon",
+                    OracionTojolabal = "oj kankon",
                     OracionEspañol = "(Voy a quedarme)",
                     Url = "OjKankon.aac"
                 });
                 OracionesList.Add(new RepetirOracionModel
                 {
                     Id = 10,
-                    OracionTojolabal = "Jayexa wajab'ili'?",
+                    OracionTojolabal = "Jayexa wajab'ili?",
                     OracionEspañol = "(¿Cuántos años tienes?)",
                     Url = "JayeXaWaJabili.aac"
                 });
 
                 Random randomN = new Random();
 
-                int n = randomN.Next(1, 11);
+                
                 OracionSeleccionada = new RepetirOracionModel();
+                
+                n = n == 0 ? n + 1 : n;
 
                 OracionSeleccionada = (RepetirOracionModel)OracionesList.Where(x => x.Id.Equals(n)).FirstOrDefault();
+
+                
+
             }, () => { return true; }));
         }
 
